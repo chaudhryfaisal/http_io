@@ -15,7 +15,8 @@ readme = "README.md"
 travis-ci = { repository = "bobbobbio/http_io" }
 
 [features]
-default = ["std", "ssl-native-tls"]
+default = []
+#default = ["std", "ssl-native-tls"]
 ssl-openssl = ["ssl", "openssl"]
 ssl-rustls = ["ssl", "rustls", "webpki-roots", "rustls-pemfile"]
 ssl-native-tls = ["ssl", "native-tls"]
@@ -23,7 +24,7 @@ std = []
 ssl = []
 
 [dependencies]
-hashbrown = "*"
+hashbrown = { version = "=0.14.2"}
 openssl = { version = "*", optional = true }
 rustls = { version = "^0.20.8", optional = true }
 webpki-roots = { version = "*", optional = true }
